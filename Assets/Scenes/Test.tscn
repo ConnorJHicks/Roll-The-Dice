@@ -1,3 +1,48 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
 
-[node name="Spatial" type="Spatial"]
+[ext_resource path="res://Assets/Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Scenes/DeathTrigger.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="Environment" id=3]
+background_mode = 1
+background_color = Color( 0.0705882, 0.713726, 0.996078, 1 )
+ambient_light_color = Color( 0.0666667, 0.72549, 0.901961, 1 )
+fog_enabled = true
+fog_depth_begin = 0.0
+tonemap_mode = 3
+adjustment_enabled = true
+adjustment_brightness = 0.75
+adjustment_contrast = 1.5
+adjustment_saturation = 1.2
+
+[node name="Test" type="Spatial"]
+
+[node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 5, 0, 0, 0, 0.866025, 50, 0, -0.5, 86.6025, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 54.3111, 81.6026 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.5, -0.75, 0.433013, 0, 0.5, 0.866025, -0.866025, -0.433013, 0.25, 0, 100, 0 )
+light_color = Color( 1, 0.937255, 0, 1 )
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[node name="DeathTrigger" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0 )
