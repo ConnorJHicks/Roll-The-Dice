@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Assets/Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Die.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Scenes/DeathTrigger.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Textures/rock.jpg" type="Texture" id=3]
 [ext_resource path="res://Assets/Textures/wildgrass.png" type="Texture" id=4]
@@ -120,10 +120,6 @@ material/0 = SubResource( 11 )
 transform = Transform( 3.315, 0, 0, 0, 2.596, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 12 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 54.3111, 89.7903 )
-launch_impulse_mag = 500
-
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.5, -0.75, 0.433013, 0, 0.5, 0.866025, -0.866025, -0.433013, 0.25, 0, 100, 0 )
 light_color = Color( 1, 0.937255, 0, 1 )
@@ -146,3 +142,6 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
 material/0 = null
+
+[node name="Die" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.323446, 52.9427, 91.5023 )
