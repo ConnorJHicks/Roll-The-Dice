@@ -34,9 +34,9 @@ func _physics_process(delta):
 	var ball_pos = global_transform.origin
 	var new_camera_pos = lerp(old_camera_pos, ball_pos, 0.1)
 	var mouse_position = get_viewport().get_mouse_position()
-	print(mouse_position)
+	#print(mouse_position)
 	var launch_angle = ((mouse_position.x / OS.get_window_size().x) * 180) - 90
-	print(launch_angle)
+	#print(launch_angle)
 
 
 	
@@ -45,12 +45,13 @@ func _physics_process(delta):
 	
 	#inital jump
 	var is_grounded = $FloorCheck.is_colliding()
-	if can_jump && is_grounded:
-		if Input.is_action_just_pressed("jump"):
-			
-			apply_central_impulse(Vector3.UP * jump_impulse)
-			apply_central_impulse(Vector3.FORWARD * launch_impulse_mag)
-			can_jump = false
+	if can_jump:
+		if is_grounded:
+			if Input.is_action_just_pressed("jump"):
+				print("Just jumped")
+				apply_central_impulse(Vector3.UP * jump_impulse)
+				apply_central_impulse(Vector3.FORWARD * launch_impulse_mag)
+				can_jump = false
 	if Input.is_action_pressed("left"):
 		angular_velocity.z += rolling_force*delta
 	elif Input.is_action_pressed("right"):
