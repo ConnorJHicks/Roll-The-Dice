@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Textures/label_new_game.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Textures/label_options.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Textures/title.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Textures/label_continue.png" type="Texture" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = -2.00002
+margin_right = 14.0
+margin_bottom = -2.0
+rect_scale = Vector2( 0.683227, 0.70473 )
+rect_pivot_offset = Vector2( -9, 33 )
+
+[node name="Continue" type="TextureRect" parent="."]
+margin_left = 10.0
+margin_top = 391.0
+margin_right = 524.0
+margin_bottom = 524.0
+texture = ExtResource( 4 )
+
+[node name="Exit" type="TextureRect" parent="."]
+margin_left = 7.0
+margin_top = 474.0
+margin_right = 333.0
+margin_bottom = 548.0
+texture = ExtResource( 2 )
+
+[node name="New Game" type="TextureRect" parent="."]
+margin_left = 7.10011
+margin_top = 291.255
+margin_right = 322.1
+margin_bottom = 337.255
+rect_scale = Vector2( 1.20248, 1.77682 )
+texture = ExtResource( 1 )
+
+[node name="Title" type="TextureRect" parent="."]
+margin_left = 440.338
+margin_top = 10.2963
+margin_right = 898.338
+margin_bottom = 174.296
+rect_scale = Vector2( 2.80102, 2.5708 )
+texture = ExtResource( 3 )
