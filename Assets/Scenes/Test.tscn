@@ -122,7 +122,7 @@ shape = SubResource( 12 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 54.3111, 89.7903 )
-launch_impulse_mag = 5000
+launch_impulse_mag = 500
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.5, -0.75, 0.433013, 0, 0.5, 0.866025, -0.866025, -0.433013, 0.25, 0, 100, 0 )
