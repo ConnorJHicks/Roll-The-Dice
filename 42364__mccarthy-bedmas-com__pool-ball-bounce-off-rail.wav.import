@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/42364__mccarthy-bedmas-com__pool-ball-bounce-off-rail.wav-bb69882c903a6f6d3189736a8cd4f6b2.sample"
+
+[deps]
+
+source_file="res://42364__mccarthy-bedmas-com__pool-ball-bounce-off-rail.wav"
+dest_files=[ "res://.import/42364__mccarthy-bedmas-com__pool-ball-bounce-off-rail.wav-bb69882c903a6f6d3189736a8cd4f6b2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

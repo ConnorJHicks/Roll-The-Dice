@@ -38,11 +38,11 @@ ao_texture_channel = 0
 
 [sub_resource type="CylinderShape" id=12]
 
-[sub_resource type="ProceduralSky" id=4]
+[sub_resource type="ProceduralSky" id=13]
 
 [sub_resource type="Environment" id=3]
 background_mode = 2
-background_sky = SubResource( 4 )
+background_sky = SubResource( 13 )
 background_color = Color( 0.0705882, 0.713726, 0.996078, 1 )
 ambient_light_color = Color( 0.0666667, 0.72549, 0.901961, 1 )
 fog_enabled = true
