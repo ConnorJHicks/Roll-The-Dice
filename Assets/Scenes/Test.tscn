@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Scenes/DeathTrigger.tscn" type="PackedScene" id=2]
@@ -7,8 +7,11 @@
 
 [sub_resource type="CubeMesh" id=2]
 
+[sub_resource type="ProceduralSky" id=4]
+
 [sub_resource type="Environment" id=3]
-background_mode = 1
+background_mode = 2
+background_sky = SubResource( 4 )
 background_color = Color( 0.0705882, 0.713726, 0.996078, 1 )
 ambient_light_color = Color( 0.0666667, 0.72549, 0.901961, 1 )
 fog_enabled = true
